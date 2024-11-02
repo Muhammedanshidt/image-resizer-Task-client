@@ -4,7 +4,7 @@ import Page from "./Page"
 function App() {
   return (
     <div className="App">
-heklllogit 
+<Page/>
     </div>
   );
 }
