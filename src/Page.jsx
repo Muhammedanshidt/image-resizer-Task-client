@@ -28,7 +28,7 @@ function Page() {
         data.append('height', height);
 
         try {
-            const res = await axios.post('http://localhost:3001/upload', data);
+            const res = await axios.post('https://image-resizer-task-server.onrender.com/upload', data);
             console.log(res);
             if (res.status === 200) {
                 setResponse(true);
@@ -42,7 +42,7 @@ function Page() {
     const downloadImage = async () => {
         try {
             console.log(image);
-            const res = await axios.get(`http://localhost:3001/download/${image}`, {
+            const res = await axios.get(`https://image-resizer-task-server.onrender.com/download/${image}`, {
                 responseType: "blob",
             });
 
